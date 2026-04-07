@@ -1,0 +1,101 @@
+body {
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.panel {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.map-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.map-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 260px;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+button {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+input {
+  padding: 8px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cell {
+  width: 4rem;
+  height: 3rem;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-wrap;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.cell:hover {
+  border: 2px dotted black;
+}
+
+.mine {
+  background-color: red;
+  color: white;
+}
+
+.disarmed {
+  background-color: orange;
+}
+
+.rover-marker {
+  outline: 3px solid blue;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+}
+
+.row > .cell {
+  margin: 4px;
+  word-break: break-word;
+}
+
+.info-box {
+  min-width: 260px;
+  max-width: 360px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.error {
+  color: #b00020;
+  font-weight: bold;
+}

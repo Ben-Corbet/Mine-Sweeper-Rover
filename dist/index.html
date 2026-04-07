@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4-5: Browser Operator</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <h1>Lab 4-5: FastAPI Browser Operator</h1>
+
+    <section class="panel">
+      <h2>Create Rover</h2>
+      <form id="manualCommandForm">
+        <label for="manual-commands">Enter rover commands (L/R/M/D): </label>
+        <input
+          type="text"
+          id="manual-commands"
+          placeholder="e.g. MMRDLM"
+          required
+        />
+        <button type="submit">Create Rover</button>
+      </form>
+
+      <div class="actions">
+        <button id="start">Dispatch Rover</button>
+        <button id="refreshMap">Refresh Map</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Mine Controls</h2>
+      <form id="mineForm">
+        <input type="number" id="mine-row" placeholder="row" min="0" required />
+        <input type="number" id="mine-col" placeholder="col" min="0" required />
+        <input type="number" id="mine-serial" placeholder="serial (optional)" min="1" />
+        <button type="submit">Add Mine</button>
+      </form>
+    </section>
+
+    <section class="map-container">
+      <div class="legend">
+        <h4>Note:</h4>
+        <h6>
+          The numbers in a cell show the rover path order.<br />
+          Example: if a cell contains "0,2,6", the rover occupied that cell
+          on those path steps.
+        </h6>
+
+        <h4 style="margin-top: 1rem">Legend</h4>
+        <div style="width: 6rem" class="cell">Cell</div>
+        <div style="width: 6rem" class="cell mine">Mine</div>
+        <div style="width: 6rem" class="cell disarmed">Disarmed</div>
+        <div style="width: 6rem" class="cell rover-marker">Rover</div>
+      </div>
+
+      <div class="map-side">
+        <h4 id="rover">Rover Id: none</h4>
+        <div id="map" class="map"></div>
+      </div>
+
+      <div id="info" class="info-box"></div>
+    </section>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
